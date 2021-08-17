@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const MAX_NUMBER_LENGTH = 7;
 const MAX_NUMBER_ROUNDING = 2;
@@ -13,7 +14,7 @@ function ConverterCurrency(props) {
     onAvailableAmountChange,
     onAvailableCurrencySelect,
     onDesiredAmountChange,
-    onDesiredCurrencySelect
+    onDesiredCurrencySelect,
   } = props;
 
   const [currentCurrency] = currency;
@@ -129,5 +130,17 @@ function ConverterCurrency(props) {
     </li>
   );
 }
+
+ConverterCurrency.propTypes = {
+  currency: PropTypes.array.isRequired,
+  desiredAmount: PropTypes.string.isRequired,
+  availableAmount: PropTypes.string.isRequired,
+  availableCurrency: PropTypes.string.isRequired,
+  desiredCurrency: PropTypes.string.isRequired,
+  onAvailableAmountChange: PropTypes.func.isRequired,
+  onAvailableCurrencySelect: PropTypes.func.isRequired,
+  onDesiredAmountChange: PropTypes.func.isRequired,
+  onDesiredCurrencySelect: PropTypes.func.isRequired,
+};
 
 export default ConverterCurrency;

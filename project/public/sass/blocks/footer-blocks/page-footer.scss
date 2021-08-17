@@ -54,6 +54,7 @@
 }
 
 .page-footer__contacts-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -80,36 +81,26 @@
   @include font-special(500);
   @include font-size(16px, 22px);
 
-  position: relative;
-  margin: 3px 0 0 6px;
+  margin: 3px 0 0 0;
+}
 
-  &:before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 2px;
-    left: -34px;
-    width: 16px;
-    height: 16px;
-  }
+.page-footer__phone-icon {
+  position: absolute;
+  top: 5px;
+  left: -3px;
 }
 
 .page-footer__mobile-phone {
   @include font-special(500);
   @include font-size(16px, 22px);
 
-  position: relative;
-  margin: 3px 0 0 3px;
+  margin: 3px 0 0 0;
+}
 
-  &:before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 2px;
-    left: -29px;
-    width: 10px;
-    height: 16px;
-  }
+.page-footer__mobile-phone-icon {
+  position: absolute;
+  top: 5px;
+  left: 3px;
 }
 
 .page-footer__nav-link {

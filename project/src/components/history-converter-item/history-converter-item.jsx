@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function HistoryConverterItem({historyData}) {
   const {
@@ -6,7 +7,7 @@ function HistoryConverterItem({historyData}) {
     availableAmount,
     availableCurrency,
     desiredAmount,
-    desiredCurrency
+    desiredCurrency,
   } = historyData;
 
   return (
@@ -22,5 +23,16 @@ function HistoryConverterItem({historyData}) {
     </li>
   );
 }
+
+HistoryConverterItem.propTypes = {
+  historyData: PropTypes.shape({
+    date: PropTypes.string.isRequired,
+    availableAmount: PropTypes.string.isRequired,
+    availableCurrency: PropTypes.string.isRequired,
+    desiredAmount: PropTypes.string.isRequired,
+    desiredCurrency: PropTypes.string.isRequired,
+  },
+  ).isRequired,
+};
 
 export default HistoryConverterItem;

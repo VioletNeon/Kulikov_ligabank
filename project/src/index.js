@@ -6,7 +6,7 @@ import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import {reducer} from './store/reducer';
-import {createAPI} from './services/api'
+import {createAPI} from './services/api';
 import {fetchCurrentCurrency} from './store/api-actions';
 import App from './components/app/app';
 

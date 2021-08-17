@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 import {nanoid} from 'nanoid';
 import dayjs from 'dayjs';
 import {ActionCreator} from '../../store/action';
@@ -21,7 +22,7 @@ function ConverterForm(props) {
     onAvailableAmountChange,
     onAvailableCurrencySelect,
     onDesiredAmountChange,
-    onDesiredCurrencySelect
+    onDesiredCurrencySelect,
   } = props;
 
   const handleSaveHistoryClick = (evt) => {
@@ -88,6 +89,22 @@ function ConverterForm(props) {
     </section>
   );
 }
+
+ConverterForm.propTypes = {
+  date: PropTypes.string.isRequired,
+  currency: PropTypes.array.isRequired,
+  desiredAmount: PropTypes.string.isRequired,
+  availableAmount: PropTypes.string.isRequired,
+  availableCurrency: PropTypes.string.isRequired,
+  desiredCurrency: PropTypes.string.isRequired,
+  onCurrentDateChange: PropTypes.func.isRequired,
+  onPastDateChange: PropTypes.func.isRequired,
+  onSaveHistoryClick: PropTypes.func.isRequired,
+  onAvailableAmountChange: PropTypes.func.isRequired,
+  onAvailableCurrencySelect: PropTypes.func.isRequired,
+  onDesiredAmountChange: PropTypes.func.isRequired,
+  onDesiredCurrencySelect: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = (state) => ({
   date: state.date,

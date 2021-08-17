@@ -30,12 +30,18 @@ function Footer() {
         </ul>
         <ul className="page-footer__contacts-list">
           <li className="page-footer__contacts-item">
+            <svg className="page-footer__mobile-phone-icon" width="10" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use xlinkHref="#mobile-phone-icon"/>
+            </svg>
             <span className="page-footer__mobile-phone">*0904</span>
             <p className="page-footer__info-subscribers footer-text">
               Бесплатно для абонентов МТС, Билайн, Мегафон, Теле2
             </p>
           </li>
           <li className="page-footer__contacts-item">
+            <svg className="page-footer__phone-icon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use xlinkHref="#phone-icon"/>
+            </svg>
             <span className="page-footer__phone">8 800 111 22 33</span>
             <p className="page-footer__info-global-phones footer-text">
               Бесплатный для всех городов России

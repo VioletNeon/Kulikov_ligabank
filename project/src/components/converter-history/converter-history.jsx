@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 import {ActionCreator} from '../../store/action';
 import HistoryConverterItem from '../history-converter-item/history-converter-item';
 
@@ -32,12 +33,17 @@ function ConverterHistory({converterHistory, onClearHistoryClick}) {
   );
 }
 
+ConverterHistory.propTypes = {
+  converterHistory: PropTypes.array.isRequired,
+  onClearHistoryClick: PropTypes.func.isRequired,
+};
+
 const mapStateToProps = (state) => ({
   converterHistory: state.converterHistory,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  onClearHistoryClick(amount) {
+  onClearHistoryClick() {
     dispatch(ActionCreator.clearHistory());
   },
 });
