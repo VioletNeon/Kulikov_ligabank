@@ -5,8 +5,8 @@
   src: local("Roboto"),
     local("roboto"),
     local("Roboto-Regular"),
-    url("../fonts/robotoregular.woff2") format("woff2"),
-    url("../fonts/robotoregular.woff") format("woff");
+    url("../../src/fonts/robotoregular.woff2") format("woff2"),
+    url("../../src/fonts/robotoregular.woff") format("woff");
   font-display: swap;
 }
 
@@ -17,8 +17,8 @@
   src: local("Roboto"),
   local("roboto"),
   local("roboto-Medium"),
-  url("../fonts/robotomedium.woff2") format("woff2"),
-  url("../fonts/robotomedium.woff") format("woff");
+  url("../../src/fonts/robotomedium.woff2") format("woff2"),
+  url("../../src/fonts/robotomedium.woff") format("woff");
   font-display: swap;
 }
 
@@ -29,7 +29,7 @@
   src: local("Roboto"),
     local("roboto"),
     local("roboto-Bold"),
-    url("../fonts/robotobold.woff2") format("woff2"),
-    url("../fonts/robotobold.woff") format("woff");
+    url("../../src/fonts/robotobold.woff2") format("woff2"),
+    url("../../src/fonts/robotobold.woff") format("woff");
   font-display: swap;
 }

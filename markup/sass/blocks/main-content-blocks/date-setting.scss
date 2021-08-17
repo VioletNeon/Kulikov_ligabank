@@ -12,8 +12,10 @@
 }
 
 .date-setting__item {
+  position: relative;
   margin: 0;
   padding: 0;
+  z-index: 3;
 }
 
 .date-setting__input {
@@ -27,4 +29,20 @@
   width: 390px;
   border: 1px solid $black-color;
   border-radius: 4px;
+  color: $black-color;
+}
+
+.date-setting__input::-webkit-calendar-picker-indicator {
+  z-index: 5;
+  margin: 0 10px 0 0;
+  width: 45px;
+  height: 45px;
+  opacity: 0;
+}
+
+.date-setting__icon {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  z-index: 1;
 }
