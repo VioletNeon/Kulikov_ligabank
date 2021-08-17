@@ -1,0 +1,20 @@
+.social__list {
+  @include reset-list-style();
+
+  grid-row: 1 / 2;
+  grid-column: 4 / 5;
+  display: flex;
+  flex-direction: row;
+  column-gap: 14px;
+  margin: 5px 0 0 0;
+}
+
+.social__item {
+  width: min-content;
+  margin: 3px 0 0 0;
+}
+
+.social__link-logo {
+  width: 16px;
+  height: 16px;
+}

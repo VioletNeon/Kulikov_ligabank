@@ -1,0 +1,53 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.main-nav__list {
+  @include reset-list-style();
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  column-gap: 26px;
+}
+
+.main-nav__item {
+  @include font-special(500);
+  @include font-size(20px, 20px);
+
+  position: relative;
+  padding: 39px 0 36px 0;
+}
+
+.main-nav__link {
+  @include position-zero();
+  @include font-special(400);
+  @include font-size(16px, 19px);
+
+  cursor: pointer;
+  color: $black-dark-gray-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+
+  &--active {
+    color: $medium-blue-color;
+  }
+}
+
+.main-nav__log-button {
+  align-self: center;
+  margin: 0 0 0 150px;
+  display: flex;
+  cursor: pointer;
+}
+
+.main-nav__log-button span {
+  @include font-special(400);
+  @include font-size(16px, 19px);
+
+  margin: auto 0 auto 9px;
+}

@@ -1,0 +1,6 @@
+.history-text {
+  @include font-special(400);
+  @include font-size(18px, 23px);
+
+  color: $black-color;
+}

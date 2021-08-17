@@ -1,58 +1,46 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {useSelector, useDispatch} from 'react-redux';
-import {AppRoute, AuthorizationStatus} from '../../const';
-import {logout} from '../../store/api-actions';
-import {selectAuthorizationStatus, selectAuthInfo} from '../../store/user/selectors';
 
 function Header() {
-  const authorizationStatus = useSelector(selectAuthorizationStatus);
-  const authInfo = useSelector(selectAuthInfo);
-  const dispatch = useDispatch();
-
-  const [{email, avatarUrl, name}] = authInfo;
-  const isAuthorized = authorizationStatus === AuthorizationStatus.AUTH;
-
-  const handleSignOutClick = () => {
-    dispatch(logout());
-  };
-
   return (
-    <header className="header">
-      <div className="container">
-        <div className="header__wrapper">
-          <div className="header__left">
-            <Link
-              className={`header__logo-link ${isAuthorized && 'header__logo-link--active'}`}
-              to="/"
-            >
-              <img className="header__logo" src={'img/logo.svg'} alt="6 cities logo" width="81" height="41"/>
-            </Link>
-          </div>
-          <nav className="header__nav">
-            <ul className="header__nav-list">
-              <li className="header__nav-item user">
-                <Link
-                  className="header__nav-link header__nav-link--profile"
-                  to={!isAuthorized ? AppRoute.LOGIN : AppRoute.FAVORITES}
-                >
-                  <div className="header__avatar-wrapper user__avatar-wrapper">
-                    {avatarUrl ?
-                      (<img className="user__avatar" width="54" height="54" src={avatarUrl} alt={`avatar ${name}`}/>) : ''}
-                  </div>
-                  {email ? <span className="header__user-name user__name">{email}</span> : <span className="header__login">Sign in</span>}
-                </Link>
-              </li>
-              {isAuthorized && (
-                <li className="header__nav-item">
-                  <Link className="header__nav-link" to="#" onClick={handleSignOutClick}>
-                    <span className="header__signout">Sign out</span>
-                  </Link>
-                </li>
-              )}
-            </ul>
-          </nav>
+    <header className="page-header">
+      <div className="page-header__wrapper">
+        <div className="page-header__logo-wrapper">
+          <Link className="page-logo" to="#">
+            <img className="page-logo__image" src={'img/logo.svg'} width="28" height="25" alt="Лига банк" />
+            <img className="page-logo__text" src={'img/logo-text.svg'} width="112" height="14" alt="Лига банк" />
+          </Link>
         </div>
+        <nav className="main-nav">
+          <div className="main-nav__wrapper">
+            <ul className="main-nav__list">
+              <li className="main-nav__item">
+                <Link className="main-nav__link" to="#">Услуги</Link>
+              </li>
+              <li className="main-nav__item">
+                <Link className="main-nav__link" to="#">Рассчитать кредит</Link>
+              </li>
+              <li className="main-nav__item">
+                <Link className="main-nav__link main-nav__link--active" to="#">Конвертер валют</Link>
+              </li>
+              <li className="main-nav__item">
+                <Link className="main-nav__link" to="#">Контакты</Link>
+              </li>
+              <li className="main-nav__item">
+                <Link className="main-nav__link" to="#">Задать вопрос</Link>
+              </li>
+            </ul>
+          </div>
+          <Link className="main-nav__log-button" type="button" to="#">
+            <svg width="20" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.2 14.3h2.2v5.5h13.4V2.2H4.4v5.5H2.2V1.1c0-.3.1-.6.3-.8.3-.2.5-.3.8-.3H19c.3 0 .6.1.8.3.2.2.3.5.3.8v19.8c0 .3-.1.6-.3.8-.2.2-.5.3-.8.3H3.3c-.3 0-.5-.1-.8-.3a1 1 0 01-.3-.8v-6.6zM9 9.9V6.6l5.5 4.4L9 15.4v-3.3H0V9.9h8.9z"
+                fill="#1F1E25"
+              />
+            </svg>
+            <span>Войти в Интернет-банк</span>
+          </Link>
+        </nav>
       </div>
     </header>
   );

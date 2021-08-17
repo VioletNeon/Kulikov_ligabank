@@ -1,0 +1,30 @@
+.date-setting  {
+  grid-row: 2 / 3;
+  grid-column: 1 / 3;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  border: none;
+}
+
+.date-setting__list {
+  @include reset-list-style();
+}
+
+.date-setting__item {
+  margin: 0;
+  padding: 0;
+}
+
+.date-setting__input {
+  @include font-special(500);
+  @include font-size(24px, 33px);
+
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  width: 390px;
+  border: 1px solid $black-color;
+  border-radius: 4px;
+}

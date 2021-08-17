@@ -1,0 +1,27 @@
+.converter-section {
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  display: grid;
+  padding: 0 0 0 7px;
+  margin: 0 auto;
+  width: 1170px;
+  grid-template-columns: 1fr min-content min-content 1fr;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+.converter-section__title {
+  @include font-special(700);
+  @include font-size(41px, 57px);
+
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+  margin: 48px 0;
+}
+
+.converter-section__container {
+  grid-column: 1 / 5;
+  grid-row: 2 / 4;
+  z-index: 2;
+  margin: 0 0 100px 0;
+  width: max-content;
+}

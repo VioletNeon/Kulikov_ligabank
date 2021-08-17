@@ -1,0 +1,23 @@
+.form {
+  padding: 0;
+  display: grid;
+  grid-template-rows: min-content min-content;
+  grid-template-columns: 1fr min-content min-content 1fr;
+}
+
+.form__wrapper-button {
+  grid-row: 2 / 3;
+  grid-column: 3 / 5;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.form__button {
+  @include font-special(500);
+  @include font-size(18px, 25px);
+
+  margin: 0;
+  width: fit-content;
+  padding: 20px 103px 15px 101px;
+}

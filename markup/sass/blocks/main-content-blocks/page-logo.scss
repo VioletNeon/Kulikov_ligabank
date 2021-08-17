@@ -1,0 +1,11 @@
+.page-logo {
+  display: flex;
+  width: 150px;
+  height: fit-content;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.page-logo__text {
+  align-self: flex-end;
+}

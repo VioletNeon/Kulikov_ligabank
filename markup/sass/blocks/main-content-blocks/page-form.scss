@@ -1,0 +1,8 @@
+.page-form {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr min-content 1fr;
+  grid-template-rows: min-content min-content min-content;
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+}
